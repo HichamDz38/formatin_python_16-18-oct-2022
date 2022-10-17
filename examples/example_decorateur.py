@@ -31,3 +31,10 @@ users = users + ["user123"]
 
 download("https://n import quoi")
 play("https://n import quoi", 60, 720, 1.5)
+
+
+def test_kwargs(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+test_kwargs(1, 2, 3, 4, 5 ,6, a=12, b=13)
