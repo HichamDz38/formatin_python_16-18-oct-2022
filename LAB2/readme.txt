@@ -3,6 +3,6 @@ owid-covid-data.csv
 Le fichier deja exist dans le dossier LAB2, mais on peut les telecharger:
 https://ourworldindata.org/coronavirus/country/algeria
 	
-	Choisir 5 payes
-	Afficher le nombres des cas total par paye
+	Choisir 5 coutry
+	Afficher le nombres des cas total par coutry
 	Pour chaque payer afficher le nombre de nouveau cas dans chaque mois
