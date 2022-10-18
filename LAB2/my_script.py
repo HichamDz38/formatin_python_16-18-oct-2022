@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 #############################################################
 ##                 Choisir 5 coutry                        ##
 #############################################################
@@ -60,3 +61,36 @@ for l in data:
         else:
             monthly_cases[c][date_] = total
 print(monthly_cases)
+
+
+############################################################################
+## Pour chaque payer afficher le nombre de nouveau cas dans chaque jour  ###
+############################################################################
+
+
+daily_cases = {}
+
+for country in countries:
+    daily_cases[country] = {}
+
+for l in data:
+    L = l.split(",")
+    c =  L[2]
+    if L[5]:
+        total = int(float(L[5]))
+    else:
+        total = 0
+    date_ = L[3]
+
+    if c in countries:
+        if date_ in daily_cases[c].keys():
+            daily_cases[c][date_] += total
+        else:
+            daily_cases[c][date_] = total
+
+values = daily_cases["Algeria"]
+
+X = values.keys()
+Y = values.values()
+plt.plot(X, Y)
+plt.show()
